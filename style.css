@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 100px;
+  gap: 40px;
 }
 
 .hero-text {
@@ -44,7 +45,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: clamp(28px, 6vw, 48px);
   font-weight: 900;
   margin-bottom: 20px;
 }
@@ -67,7 +68,8 @@ body {
 
 .hero-image {
   background-color: #6b7280;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 250px;
   display: flex;
   justify-content: center;
@@ -140,6 +142,7 @@ body {
   justify-content: space-between;
   align-items: center;
   color: #F9FAF8;
+  gap: 20px;
 }
 
 .cta button {
@@ -157,4 +160,71 @@ body {
   color: #F9FAF8;
   text-align: center;
   padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .info {
+    padding: 40px 20px;
+  }
+
+  .info-cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .quote {
+    padding: 60px 20px;
+    font-size: 24px;
+  }
+
+  .cta {
+    flex-direction: column;
+    text-align: center;
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 200px;
+  }
+
+  .quote {
+    font-size: 20px;
+    padding: 40px 20px;
+  }
+
+  .cta h3 {
+    font-size: 20px;
+  }
+
+  .cta p {
+    font-size: 16px;
+  }
 }
